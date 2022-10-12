@@ -1,0 +1,92 @@
+type User {
+    id: ID!
+    displayName: String
+    firebaseId: String
+    email: String
+    phoneNumber: String
+    dateOfBirth: String
+    gender: Gender
+    profileUrl: String
+    loginStatus: LoginStatus
+    role :Role
+    provider: Provider
+    language: String
+    heartPoints: Float
+    state: String
+    country: String
+    city: String
+    address: String
+    passportId: String
+    taxId: String
+    postalId: String
+    timeZone: String
+    cityZenShipCountry: String
+    createdAt: String
+    lastLogin: String
+}
+
+type Query {
+    getAllUser(count: Int):[User]
+    getUser(userId: ID):User
+}
+
+type Mutation {
+    signUp(user:UserInput):User
+    updateSignUp(user:UserInput):User
+    deleteUser(userId:ID):String
+}
+
+input UserInput{
+    userId: Int
+    displayName: String
+    firebaseId: String
+    email: String
+    phoneNumber: String
+    dateOfBirth: String
+    gender: Gender
+    profileUrl: String
+    loginStatus: LoginStatus
+    role :Role
+    provider: Provider
+    language: String
+    heartPoints: Float
+    state: String
+    country: String
+    city: String
+    address: String
+    passportId: String
+    taxId: String
+    postalId: String
+    timeZone: String
+    cityZenShipCountry: String
+    createdAt: String
+    lastLogin: String
+}
+
+enum Gender{
+    MALE
+    FEMALE
+}
+
+enum LoginStatus {
+    ANONYMOUS
+    LOGGEDIN
+    LOGGEDOUT
+}
+
+enum Provider {
+    FACEBOOK
+    GOOGLE
+    APPLE
+    EMAIL
+    MOBILE
+}
+
+enum Role {
+    SUPER_ADMIN
+    ADMIN
+    CONTENT_OWNER
+    USER
+    PRECEPTOR
+    CUSTOM_ROLE
+}

@@ -1,0 +1,33 @@
+# Custom server port
+server:
+  port: 9090
+
+# Database config
+spring:
+  data:
+    jpa:
+      repositories:
+        enabled: true
+  datasource:
+    username: root
+    password: passw0rd
+    url: jdbc:mysql://localhost:3306/graphqltestdb?createDatabaseIfNotExist=true
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+  # JPA config
+  jpa:
+    database: mysql
+    database-platform: 'org.hibernate.dialect.MySQL8Dialect'
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+  # If you want custom banner
+  banner:
+    location: static/banner.txt
+
+# GraphQL config
+graphql:
+  servlet:
+    # if you want to @ExceptionHandler annotation for custom GraphQLErrors
+    exception-handlers-enabled: true
