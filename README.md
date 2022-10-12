@@ -20,7 +20,7 @@ This is a sample graphql spring boot project. This project has implemented all t
 
 ### **Clone this project using:**
 ```
-git clone --recurse-submodules https://github.com/codeprismtechnologies/heartfulness-backend.git
+git clone https://github.com/codeprismtechnologies/starter-graphql-springboot.git
 ```
 ### **Pre-requisites:**
 * Make sure you are using Java version 11 or 17
