@@ -36,7 +36,7 @@ public class UserService {
      * @return {@link User}
      */
     @Transactional
-    public User signUp(UserInput input) throws UserAlreadyExistException {
+    public User signUp(UserInput input){
         log.info("Entered into signUp service method. user displayName was :: {} ", input.getDisplayName());
         // Step 1 : Java locale object created to validate language and country
         Locale locale = new Locale(input.getLanguage(),input.getCountry());

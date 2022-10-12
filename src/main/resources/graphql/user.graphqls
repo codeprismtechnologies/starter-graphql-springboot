@@ -46,7 +46,7 @@ input UserInput{
     gender: Gender
     profileUrl: String
     loginStatus: LoginStatus
-    role :Role
+    role: Role
     provider: Provider
     language: String
     heartPoints: Float
